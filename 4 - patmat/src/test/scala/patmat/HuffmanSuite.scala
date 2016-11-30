@@ -51,4 +51,11 @@ class HuffmanSuite extends FunSuite {
     }
   }
 
+  test("encode and quickEncode should yield the same results") {
+    new TestTrees {
+      assert(encode(t2)("abdbdda".toList) == quickEncode(t2)("abdbdda".toList))
+      assert(encode(t1)("abba".toList) == quickEncode(t1)("abba".toList))
+    }
+  }
+
 }
